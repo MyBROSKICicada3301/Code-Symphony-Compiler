@@ -192,7 +192,7 @@ function Page() {
       </main>
 
       <footer className="grid grid-cols-[1fr_auto] items-center gap-4 border-t border-border px-6 py-2 font-mono text-[11px] text-muted-foreground">
-        <span>code symphony compiler — a precision instrument for sound from logic</span>
+        <span>code symphony compiler ☮️ MAY THE FORCE BE WITH YOU</span>
         <span>web audio · 44.1khz</span>
       </footer>
     </div>
