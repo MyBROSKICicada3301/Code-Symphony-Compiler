@@ -4,9 +4,9 @@
 
 Code Symphony Compiler is an experimental system that transforms C code into music.
 
-Instead of treating code as instructions for a machine, it treats code as a **musical score**. The compiler becomes a performer, interpreting syntax, structure, and execution flow as sound.
+Instead of treating code as instructions for a machine, it treats code as a multi-layered musical score. The compiler becomes a performer, interpreting syntax, structure, memory behavior, and execution flow as sound.
 
-The result: every program is not just executed — it is *heard*.
+The result: every program is not just executed — it is performed and heard as composition.
 
 ---
 
@@ -18,54 +18,101 @@ Traditional flow:
 
 Code Symphony flow:
 
-> Code → Parser → Musical Mapping Engine → Sound Output (Live Composition)
+> Code → Parser → Musical Mapping Engine → Live Sound Engine → Musical Composition
 
-Each part of the C program contributes to a layered musical composition:
+Each part of a C program contributes to a layered musical system:
 
 - Syntax elements become instruments
-- Program structure becomes rhythm and harmony
-- Execution flow becomes melody progression
+- Data types define tone color (timbre)
+- Control flow becomes rhythm and melody
+- Memory behavior becomes electronic texture and effects
+- Operators shape modulation and harmony
+- Program structure becomes composition architecture
 
 ---
 
 ## Musical Mapping System
 
-### Keywords → Instruments
+### Control Flow → Rhythm Layer
 
-| C Element  | Sound Representation      |
-| ---------- | ------------------------- |
-| `int`    | Piano (structure)         |
-| `if`     | Bell / Chime (decision)   |
-| `for`    | Drum loop (repetition)    |
-| `while`  | Synth drone (continuity)  |
-| `return` | Resolving chord (closure) |
-| `printf` | Lead instrument (voice)   |
-
----
-
-### Structure → Musical Behavior
-
-- `{}` code blocks → musical phrases
-- indentation → volume / reverb depth
-- nesting depth → pitch layering
-- functions → separate instrument tracks
+| C Element  | Sound Representation                   |
+| ---------- | -------------------------------------- |
+| `for`    | Percussion loop (rhythmic repetition)  |
+| `while`  | Synth drone (continuous tension loop)  |
+| `if`     | Bell / chime (decision trigger accent) |
+| `return` | Resolving chord (musical closure)      |
+| `printf` | Melodic lead (foreground voice)        |
 
 ---
 
-### Execution Flow → Melody Logic
+### Data Types → Timbre Layer (Sound Color)
 
-- Linear flow → melody line
-- Branching (`if/else`) → harmonic split
-- Loops → repeating motifs
-- Recursion → evolving echo patterns
+| C Element    | Sound Representation                      |
+| ------------ | ----------------------------------------- |
+| `int`      | Piano (solid tone, structural clarity)    |
+| `float`    | Glockenspiel (slightly shimmering pitch)  |
+| `double`   | Layered piano + echo (wide harmonic body) |
+| `char`     | Click / short pluck (atomic sound unit)   |
+| `void`     | Silence (intentional rest)                |
+| `unsigned` | Brighter pitch variant (frequency uplift) |
 
 ---
 
-### Variables → Musical Identity
+### Data Structures → Ensemble Layer
 
-- Each variable name is hashed into a musical motif
-- Reused variables trigger recurring musical themes
-- Semantic hints can influence tone (e.g., `enemy`, `score`, `health`)
+- `array` → repeating sequencer grid (looped rhythm pattern)
+- `struct` → chord cluster (multiple instruments unified)
+- `union` → shared instrument slot (mutually exclusive voice)
+- `enum` → stepped scale sequence (ordered tonal progression)
+- `typedef` → instrument alias (renamed identity, same sound)
+
+---
+
+### Memory & Pointers → Electronic Behavior Layer
+
+- `pointer (*)` → echo / delayed duplicate note
+- `&` → reverse echo trigger (reference-based activation)
+- `*` (dereference) → sound expansion (single note becomes layered voice)
+- `NULL` → silence drop / muted channel
+- `p++` → pitch glide upward step
+- `malloc` → instrument spawn (new voice enters composition)
+- `free` → decay + fade-out + reverb collapse
+
+---
+
+### Operators → Sound Modulation Layer
+
+- `=` → tuning lock (fix pitch stability)
+- `+` → harmonic merge (blend sounds)
+- `-` → filter subtraction (remove layers)
+- `*` → distortion / harmonic thickening
+- `/` → stereo split (channel separation)
+- `%` → rhythmic variation / syncopation trigger
+- `++` → arpeggio step-up (pitch increment sequence)
+- `--` → arpeggio step-down (pitch decay sequence)
+- `==` → harmonic alignment (perfect match)
+- `!=` → dissonance trigger (tension)
+- `<` `>` → spatial pan (left/right movement)
+- `&&` → layered chord requirement (simultaneous activation)
+- `||` → branching sound paths (alternate routing)
+
+---
+
+### Syntax Structure → Composition Architecture
+
+- `{}` → musical phrase container (section grouping)
+- `;` → beat separator (time step advancement)
+- `()` → envelope shaping boundary (sound articulation control)
+- `[]` → sequencer lane (pattern grid row)
+
+---
+
+### Preprocessor → Remix Engine Layer
+
+- `#include` → instrument library import (new sound set added)
+- `#define` → reusable riff / macro pattern
+- `#ifdef` → conditional remix layer (alternate composition branch)
+- `#endif` → end of remix layer (return to base composition)
 
 ---
 
