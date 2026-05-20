@@ -1,0 +1,108 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-signal: var(--signal);
+  --color-surface-2: var(--surface-2);
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-mono: "Poppins", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 2px;
+  /* Calm studio palette — warm off-white paper, ink, signal orange */
+  --background: oklch(0.955 0.005 90);
+  --foreground: oklch(0.18 0.005 90);
+  --surface-2: oklch(0.92 0.006 90);
+  --card: oklch(0.97 0.004 90);
+  --card-foreground: oklch(0.18 0.005 90);
+  --popover: oklch(0.97 0.004 90);
+  --popover-foreground: oklch(0.18 0.005 90);
+  --primary: oklch(0.22 0.006 90);
+  --primary-foreground: oklch(0.97 0.004 90);
+  --secondary: oklch(0.9 0.006 90);
+  --secondary-foreground: oklch(0.22 0.006 90);
+  --muted: oklch(0.92 0.006 90);
+  --muted-foreground: oklch(0.45 0.008 90);
+  --accent: oklch(0.88 0.006 90);
+  --accent-foreground: oklch(0.22 0.006 90);
+  --destructive: oklch(0.55 0.18 30);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.82 0.006 90);
+  --input: oklch(0.86 0.006 90);
+  --ring: oklch(0.45 0.008 90);
+  /* single signal hue — used sparingly for active state */
+  --signal: oklch(0.62 0.18 45);
+}
+
+.dark { /* light only */ }
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    font-feature-settings: "ss01", "tnum";
+  }
+  html, body, #root { height: 100%; }
+  html { font-family: var(--font-sans); letter-spacing: -0.02em; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-weight: 400;
+  }
+  h1, h2, h3, h4, h5, h6 { font-weight: 500; letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .font-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .tracking-tight-2 { letter-spacing: -0.02em; }
+  .text-signal { color: var(--color-signal); }
+  .bg-signal { background-color: var(--color-signal); }
+  .border-signal { border-color: var(--color-signal); }
+  .uppercase-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color-muted-foreground);
+  }
+  .hairline { border-color: var(--color-border); }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+  }
+}
+
+/* Subtle, restrained motion — no chaos */
+@keyframes line-mark {
+  0% { background-color: oklch(0.62 0.18 45 / 0); }
+  20% { background-color: oklch(0.62 0.18 45 / 0.10); }
+  100% { background-color: oklch(0.62 0.18 45 / 0); }
+}
+.animate-line-mark { animation: line-mark 0.9s ease-out; }
