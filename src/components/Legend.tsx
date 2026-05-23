@@ -1,42 +1,46 @@
 const items = [
-  // Keyboard / Harmony (data types & variables)
-  { k: 'int',       label: 'Keyboard — base chord (primary harmonic root)' },
-  { k: 'float',     label: 'Keyboard — D variation (color tone)' },
-  { k: 'double',    label: 'Keyboard — layered chord (richer harmony)' },
-  { k: 'char',      label: 'Keyboard — single note (ASCII → pitch)' },
-  { k: 'void',      label: 'Keyboard — rest / silence' },
-  { k: 'unsigned',  label: 'Keyboard — octave shift up (brighter)' },
-  { k: 'variable',  label: 'Keyboard — recurring motif (deterministic)' },
-  { k: 'printf',    label: 'Keyboard — melodic lead / function call motif' },
+  // Control flow / rhythm
+  { k: "for", label: "Drums — repeating pattern (loop)" },
+  { k: "while", label: "Drums — sustained loop" },
+  { k: "if", label: "Drums — accented hit (branch)" },
+  { k: "else", label: "Drums — alternate branch hit" },
+  { k: "switch", label: "Drums — switch / variation" },
+  { k: "case", label: "Drums — case tick" },
+  { k: "break", label: "Drums — snare / break" },
+  { k: "continue", label: "Drums — short hi-hat" },
+  { k: "return", label: "Resolution — final chord/hit" },
 
-  // Drums / Rhythm (control flow)
-  { k: 'for',       label: 'Drums — repeating drum pattern (loop)' },
-  { k: 'while',     label: 'Drums — sustained rhythmic loop' },
-  { k: 'if',        label: 'Drums — accented hit (branch)' },
-  { k: 'else',      label: 'Drums — alternate variation (branch alt)' },
-  { k: 'return',    label: 'Drums — final resolution hit' },
+  // Calls / I/O
+  { k: "printf", label: "Lead — melodic function call" },
+  { k: "scanf", label: "Lead — input / subtle motif" },
 
-  // Guitar / Melody (operators & expressions)
-  { k: '+',         label: 'Guitar — ascending motif (addition/concat)' },
-  { k: '-',         label: 'Guitar — descending motif (subtraction)' },
-  { k: '*',         label: 'Guitar — distortion / sustain (multiply/pointer op)' },
-  { k: '/',         label: 'Guitar — split melody / stereo (division)' },
-  { k: '=',         label: 'Guitar — chord lock (assignment stabilizer)' },
-  { k: '==',        label: 'Guitar — harmonic match (equality)' },
-  { k: '!=',        label: 'Guitar — dissonant strike (inequality)' },
+  // Memory / ambient
+  { k: "malloc", label: "Ambient — alloc / sound spawn" },
+  { k: "free", label: "Ambient — decay / free" },
+  { k: "sizeof", label: "Click — size / small percussive cue" },
 
-  // Ambient / Memory (pointers & allocation)
-  { k: '* (pointer)', label: 'Ambient — echo / pointer deref' },
-  { k: '& (address)', label: 'Ambient — reversed echo / reference trigger' },
-  { k: 'NULL',        label: 'Ambient — silence drop' },
-  { k: 'malloc',      label: 'Ambient — sound spawn (alloc)' },
-  { k: 'free',        label: 'Ambient — fade out / decay (free)' },
+  // Types / pads
+  { k: "struct", label: "Pad — structure (warm background)" },
+  { k: "typedef", label: "Pad — type alias (variation)" },
+  { k: "enum", label: "Pad — harmonic tint" },
+  { k: "union", label: "Pad — blended texture" },
 
-  // Symbols / Punctuation (structural cues)
-  { k: '{ }',       label: 'Phrase boundaries — begin / end musical phrases' },
-  { k: ';',         label: 'Beat separator — short timing break' },
-  { k: '( )',       label: 'Articulation — envelope shaping' },
-  { k: '[ ]',       label: 'Sequencer index — pattern/grid reference' },
+  // Operators / small percussion
+  { k: "assign", label: "Click — assignment" },
+  { k: "compare", label: "Click — comparison (harmonic match)" },
+  { k: "pointer", label: "Click — pointer / indirection" },
+  { k: "increment", label: "Click — increment tick" },
+  { k: "bitwise", label: "Glitch — bitwise / noisy texture" },
+  { k: "cast", label: "Glitch — type cast / filter sweep" },
+
+  // Literals & comments
+  { k: "string_lit", label: "Marimba — string literal / bright hit" },
+  { k: "number_lit", label: "Marimba — numeric literal / tone" },
+  { k: "macro", label: "Sweep — preprocessor macro" },
+  { k: "comment", label: "Shimmer — comment / texture" },
+
+  // Variables
+  { k: "var", label: "Motif — variable name → recurring melodic motif" },
 ];
 
 export function Legend() {
@@ -46,7 +50,7 @@ export function Legend() {
       <table className="w-full font-mono text-[12px]">
         <tbody>
           {items.map((it, i) => (
-            <tr key={it.k} className={i % 2 ? 'bg-surface-2/40' : ''}>
+            <tr key={it.k} className={i % 2 ? "bg-surface-2/40" : ""}>
               <td className="w-[40%] border-r border-border px-3 py-1.5 text-foreground">{it.k}</td>
               <td className="px-3 py-1.5 text-muted-foreground">{it.label}</td>
             </tr>
